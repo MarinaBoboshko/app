@@ -24,6 +24,7 @@ node {
          stage ('Testing container'){
          appcontainer.inside('-v /var/run/docker.sock:/var/run/docker.sock '){
                 sh "cat text.txt"
+                docker cp "text.txt:/var/lib/jenkins/workspace/testapp/app/
          }
          }
 
