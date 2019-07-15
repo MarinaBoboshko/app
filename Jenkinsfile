@@ -17,7 +17,7 @@ node {
                 sh """
                 docker ps
                 pwd
-                docker run ${app} 
+                echo ${app} 
                 ls
                 cat Data.txt
                 """
