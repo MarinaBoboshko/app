@@ -25,8 +25,7 @@ node {
          appcontainer.inside('-v /var/run/docker.sock:/var/run/docker.sock '){
                 sh """
                 python app/app.py
-                cat Data.txt
-                cat text.txt
+                cat app/text.txt
                 """
          }
          }
