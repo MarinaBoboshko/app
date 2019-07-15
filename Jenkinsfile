@@ -29,6 +29,7 @@ node {
                 cat text.txt
                 whereis text.txt
                 docker ps
+                """
          }
          }
 
