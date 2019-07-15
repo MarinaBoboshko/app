@@ -18,6 +18,7 @@ node {
                 docker ps
                 pwd
                 ls
+                cat Data.txt
                 """
 }
          }
