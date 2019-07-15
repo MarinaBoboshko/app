@@ -19,7 +19,6 @@ node {
                 docker ps
                 pwd
                 ls
-                cat text.txt
                 """
                 sh """
                 echo workspace
