@@ -22,7 +22,7 @@ node {
 }
          }
          stage ('Testing container'){
-         appcontainer.inside('-v /git/test/app/ : /test/app/ '){
+         appcontainer.inside('-v /var/run/docker.sock:/var/run/docker.sock '){
                 sh "ls"
                 sh "pwd"
          }
