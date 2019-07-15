@@ -16,7 +16,6 @@ node {
          dir('app'){
                 sh """
                 docker run -t myname
-              //  docker exec -t friendly_elion cat text.txt > Data.txt
                 docker ps
                 pwd
                 ls
