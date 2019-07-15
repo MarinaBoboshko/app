@@ -24,7 +24,7 @@ node {
          stage ('Testing container'){
          appcontainer.inside('-v /var/run/docker.sock:/var/run/docker.sock '){
                 sh "ls"
-                sh "cd app"
+                sh "cd app/"
                 sh "ls" 
                 sh "cat text.txt"
          }
