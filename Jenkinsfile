@@ -26,6 +26,8 @@ node {
                 sh """
                 python app/app.py
                 ls app/
+                cat app/Data.txt
+                cat text.txt
                 """
          }
          }
