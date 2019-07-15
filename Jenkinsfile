@@ -22,7 +22,7 @@ node {
 }
          }
          stage ('Testing container'){
-         appcontainer.inside('-v /test/app/ : /var/lib/jenkins/workspace/app/app'){
+         appcontainer.inside('-v /var/lib/jenkins/workspace/app/app : /test/app/ '){
                 sh "ls"
                 sh "pwd"
          }
