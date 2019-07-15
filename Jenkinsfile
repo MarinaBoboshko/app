@@ -26,7 +26,7 @@ node {
                 sh """
                 python app/app.py
                 cat text.txt
-                pwd
+                cp text.txt:/var/lib/jenkins/workspace/app/textnew.txt
                 """
          }
          }
