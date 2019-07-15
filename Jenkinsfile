@@ -17,7 +17,7 @@ node {
                 sh """
                 docker ps
                 pwd
-                echo ${env.Image.id} 
+                echo ${env.Image.myname} 
                 ls
                 cat Data.txt
                 """
