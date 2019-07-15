@@ -7,7 +7,7 @@ node {
                 docker ps
                 """
         dir('app'){
-                def app = docker.build("myname")
+                def appcontainer = docker.build("myname")
 
         }
 
@@ -22,7 +22,7 @@ node {
 }
          }
          stage ('Testing container'){
-         app.inside('-v /test/app/ : /var/lib/jenkins/workspace/app/app'){
+         appcontainer.inside('-v /test/app/ : /var/lib/jenkins/workspace/app/app'){
                 sh "ls"
                 sh "pwd"
          }
