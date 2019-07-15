@@ -17,14 +17,12 @@ node {
                 sh """
                 docker ps
                 pwd
-                echo ${env.Image.myname} 
                 ls
-                cat Data.txt
                 """
 }
          }
          stage ('Testing container'){
-         app.inside('-v /app:/app'){
+         app.inside('-v /:/'){
          sh "ls"
          sh "pwd"
          }
