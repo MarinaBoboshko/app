@@ -17,7 +17,7 @@ node {
                 sh """
                 docker ps
                 pwd
-                echo ${app} 
+                echo ${env.BUILD_ID} 
                 ls
                 cat Data.txt
                 """
