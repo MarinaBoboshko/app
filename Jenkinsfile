@@ -8,6 +8,7 @@ node {
                 """
         dir('app'){
                 def app = docker.build("myname")
+                def workspace = docker.build.getEnvVars()["WORKSPACE"]
 
         }
 
@@ -15,11 +16,14 @@ node {
          stage('Test image') {
          dir('app'){
                 sh """
-                docker run -t myname
                 docker ps
                 pwd
                 ls
                 cat text.txt
+                """
+                sh """
+                echo workspace
+
                 """
 }
          }
