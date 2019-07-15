@@ -23,8 +23,7 @@ node {
          }
          stage ('Testing container'){
          appcontainer.inside('-v /var/run/docker.sock:/var/run/docker.sock '){
-                sh """ls
-                cd /app/
+                sh """
                 ls 
                 whereis text.txt
                 docker ps
