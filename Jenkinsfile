@@ -7,7 +7,7 @@ node {
                 docker ps
                 """
         dir('app'){
-                def appcontainer = docker.build("myname")
+                appcontainer = docker.build("myname")
 
         }
 
