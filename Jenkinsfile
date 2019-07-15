@@ -22,10 +22,11 @@ node {
 }
          }
          stage ('Testing container'){
-         appcontainer.inside('--volumes-from /var/run/docker.sock:/var/run/docker.sock '){
+         appcontainer.inside('-v/var/run/docker.sock:/var/run/docker.sock '){
                 sh """
                 python app/app.py
                 cat text.txt
+                pwd
                 """
          }
          }
