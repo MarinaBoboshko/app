@@ -26,7 +26,6 @@ node {
                 sh """ls
                 cd /app/
                 ls 
-                cat text.txt
                 whereis text.txt
                 docker ps
                 """
