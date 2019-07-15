@@ -23,7 +23,12 @@ node {
                 """
 }
          }
-
+         stage ('Testing container'){
+         app.inside('-v /app:/app'){
+         sh "ls"
+         sh "pwd"
+         }
+         }
 
 
 }
