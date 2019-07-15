@@ -8,7 +8,6 @@ node {
                 """
         dir('app'){
                 def app = docker.build("myname")
-                def workspace = docker.build.getEnvVars()["WORKSPACE"]
 
         }
 
@@ -19,10 +18,6 @@ node {
                 docker ps
                 pwd
                 ls
-                """
-                sh """
-                echo workspace
-
                 """
 }
          }
