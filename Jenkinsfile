@@ -24,9 +24,9 @@ node {
          stage ('Testing container'){
          appcontainer.inside('-v /var/run/docker.sock:/var/run/docker.sock '){
                 sh """
-                ls 
-                pwd
-                ls app/
+                python app/app.py
+                cat Data.txt
+                cat text.txt
                 """
          }
          }
